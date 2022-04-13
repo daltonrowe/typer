@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: #eee;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 250px;
+}
+
+#word {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 200px;
+  border: 1px solid #222;
+  border-radius: 4px;
+  margin-bottom: 10px;
+
+  font-size: 28px;
+}
+
+.unsolved {
+  color: #222;
+}
+
+.solved {
+  color: green;
+}
+
+#start {
+  padding: 10px 0;
+}
+
+#root.started #start {
+  display: none;
+}
+
+#root.complete #word {
+  border-color: green;
+  background: greenyellow;
+}
